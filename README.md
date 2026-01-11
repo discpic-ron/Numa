@@ -14,3 +14,5 @@ Numa's pure existence is to help you without the need for bigger servers and hig
 * Numa has built-in memory, allowing its knowledge to be updated across all sessions.
 * Designed to be compact and efficient, Numa responds instantly, even on low-end hardware.
 * Numa’s behavior evolves based on the knowledge it receives, allowing it to develop a tone or style that matches the user
+  
+<img width="1024" height="1024" alt="Numa logo" src="https://github.com/user-attachments/assets/672dce59-a1ea-4b6d-accd-40aaf572303b" />
