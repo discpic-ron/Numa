@@ -64,14 +64,19 @@ class Response:
 
     return output
     
-  def detect_intent(self, user_input):
-    words = user_input.lower().split()
-    for intent, keywords in self.intents.items():
-      for kw in keywords:
-        if kw in words or user_input.lower().startswith(kw):
-          return intent
+def detect_intents(self, user_input):
+  found_intents = [] # Use a list instead of returning immediately
+  cleaned_input = user_input.lower()
+    
+  for intent, keywords in self.intents.items():
+    for kw in keywords:
+      kw_low = kw.lower()
+        if kw_low in cleaned_input:
+            found_intents.append(intent)
+            break # Move to the next category once this intent is found
+                
+  return found_intents if found_intents else ["unknown"]
   
-    return "unknown"
   def remember(self):
     with open(self.filename, "w") as f:
       json.dump(self.knowledge, f, indent=4)
