@@ -2,11 +2,12 @@ import pygame
 import random
 from button import Button
 
-# Constants
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("ChatGPT in python")
 clock = pygame.time.Clock()
+
+# constants
 running = True
 greetings = [
     "How can I help with?",
@@ -33,7 +34,8 @@ def chooseGreeting():
     global greetings
     greeting = random.choice(greetings)
     return f"{greeting}"
-    
+
+# button functionality    
 def sendPrompt():
     print("Prompt sent!")
     
@@ -47,6 +49,7 @@ def signUp():
     state = "sign up"
     return state
     
+# UI
 def continueAction():
     print("continued!")
 
